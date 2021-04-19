@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using LibVLCSharp.Shared;
 
 namespace MediaPlayerElementSample
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
+        public LibVLC LibVLC { get; set; }
         public ObservableCollection<CarouselModel> CarouselItems { get; set; }
         public MainPageViewModel()
         {
             Core.Initialize();
-
+            LibVLC = new LibVLC();
+            LibVLC.Log += Libvlc_Log;
             CarouselItems = new ObservableCollection<CarouselModel>
             {
                 new CarouselModel
@@ -63,6 +66,12 @@ namespace MediaPlayerElementSample
             };
         }
 
+        private void Libvlc_Log(object sender, LogEventArgs e)
+        {
+            Debug.WriteLine("LibVLC log: " + e.Message);
+
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)
@@ -74,8 +83,7 @@ namespace MediaPlayerElementSample
 
         private CarouselModel CreateNewVideoItem(string modelType, string headline, string subline, string videoUrl)
         {
-            var libVLC = new LibVLC();
-            var media = new LibVLCSharp.Shared.Media(libVLC,
+            var media = new LibVLCSharp.Shared.Media(LibVLC,
                 new Uri(videoUrl));
             var mediaPlayer = new MediaPlayer(media) { EnableHardwareDecoding = true };
             media.Dispose();
@@ -87,7 +95,7 @@ namespace MediaPlayerElementSample
                 Headline = headline,
                 Subline = subline,
                 MediaPlayer = mediaPlayer,
-                LibVLC = libVLC
+                LibVLC = LibVLC
             };
         }
     }
