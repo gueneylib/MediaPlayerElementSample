@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<DataTemplate
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MediaPlayerElementSample.NormalItemDataTemplate">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Frame VerticalOptions="FillAndExpand" Margin="0, 40, 0, 20">
+            <StackLayout>
+                <Label Text="{Binding Headline}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="{Binding Subline}" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</DataTemplate>

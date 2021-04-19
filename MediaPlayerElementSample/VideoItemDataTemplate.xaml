@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<DataTemplate
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vlc="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms"
+    x:Class="MediaPlayerElementSample.VideoItemDataTemplate">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Frame VerticalOptions="FillAndExpand" Margin="0, 40, 0, 20">
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Label Text="{Binding Headline}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50"/>
+                <Label Text="{Binding Subline}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="50"/>                
+                <vlc:MediaPlayerElement
+                    HeightRequest="500"
+                    VerticalOptions="CenterAndExpand"
+                    BackgroundColor="Red"
+                    x:Name="videoPlayer"
+                    MediaPlayer="{Binding MediaPlayer}"
+                    LibVLC="{Binding LibVLC}">
+                    <vlc:MediaPlayerElement.PlaybackControls>
+                        <vlc:PlaybackControls
+                            MainColor="White">
+                        </vlc:PlaybackControls>
+                    </vlc:MediaPlayerElement.PlaybackControls>
+                </vlc:MediaPlayerElement>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</DataTemplate>

@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{8A2742BA-9146-4E7C-8CF3-F6A1438ABDFE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MediaPlayerElementSample/VideoItemDataTemplate.xaml">
+    <Files>
+      <File FileName="MediaPlayerElementSample/MainPage.xaml" Line="12" Column="17" />
+      <File FileName="MediaPlayerElementSample/MainPage.xaml.cs" Line="11" Column="48" />
+      <File FileName="MediaPlayerElementSample/MainPageViewModel.cs" Line="82" Column="32" />
+      <File FileName="MediaPlayerElementSample/VideoItemDataTemplate.xaml" Line="18" Column="44" />
+      <File FileName="MediaPlayerElementSample/NormalItemDataTemplate.xaml" Line="7" Column="69" />
+      <File FileName="MediaPlayerElementSample/App.xaml.cs" Line="9" Column="6" />
+      <File FileName="MediaPlayerElementSample.iOS/Info.plist" />
+      <File FileName="MediaPlayerElementSample/App.xaml" Line="28" Column="36" />
+      <File FileName="MediaPlayerElementSample/MediaPlayerElementSample.csproj" Line="1" Column="1" />
+      <File FileName="MediaPlayerElementSample/AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MediaPlayerElementSample" expanded="True">
+            <Node name="MediaPlayerElementSample" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True">
+                  <Node name="LibVLCSharp.Forms" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="MediaPlayerElementSample.Android" expanded="True">
+              <Node name="Packages" expanded="True" />
+              <Node name="Assets" expanded="True" />
+            </Node>
+            <Node name="MediaPlayerElementSample.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MediaPlayerElementSample.Android PreferredExecutionTarget="Android.Pixel_4_XL_API_29" />
+  <MonoDevelop.Ide.ItemProperties.MediaPlayerElementSample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008030-000C0C6E3C31802E" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
